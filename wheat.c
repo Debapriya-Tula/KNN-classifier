@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "ML_Assign_1.h"
+#include "Prob_1.h"
 
 int main(int argc, char const *argv[]) {
     float KPMatrix[10][5] = {0};
@@ -27,7 +27,7 @@ int main(int argc, char const *argv[]) {
         }
     }
 
-    printf("\n\nThe value of K = %d\nThe value of P = %d\nThe max accuracy is %f\n", max_k+1, max_p+1, KPMatrix[max_k][max_p]);
+    printf("\n\nThe value of K = %d\nThe value of P = %d\nThe maximum accuracy is %f\n", max_k+1, max_p+1, KPMatrix[max_k][max_p]);
 
     return 0;
 }
