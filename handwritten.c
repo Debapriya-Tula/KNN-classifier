@@ -1,15 +1,15 @@
-#include "ML_Assign_2.h"
+#include <stdio.h>
+#include "Prob_2.h"
 
-int main() {
-    /*
+int main(int argc, char const *argv[]) {
     float KPMatrix[10][5] = {0};
-    int r = 18;
+    int r = 10;
 
     for (int k = 0; k < 10; k++) {
         for (int p = 0; p < 5; p++) {
-            printf("k = %d, p = %d\n", k+1, p+1);
-            KPMatrix[k][p] = KNNSpecific("data.txt", k+1, p+1, r, 3823, 64);
-            printf("%f ", KPMatrix[k][p]);
+            printf("\nK: %d, P: %d\n",k+1,p+1);
+            KPMatrix[k][p] = KNNSpecific("optdigits.txt", k+1, p+1, r, 3824, 64);
+            printf("Accuracy achieved: %f \n\n", KPMatrix[k][p]);
         }
         printf("\n");
     }
@@ -28,12 +28,7 @@ int main() {
         }
     }
 
-    printf("\n\nThe value of K = %d\nThe value of P = %d\nThe min error is %f\n", max_k+1, max_p+1, KPMatrix[max_k][max_p]);
-*/
-    int k = 1;
-    int p = 1;
-    int r = 18;
-    float metric = KNNSpecific("optdigits.txt", k, p, r, 3823, 64);
-    printf("%f\n", metric);
+    printf("\n\nThe value of K = %d\nThe value of P = %d\nThe maximum accuracy is %f\n", max_k+1, max_p+1, KPMatrix[max_k][max_p]);
+
     return 0;
 }
